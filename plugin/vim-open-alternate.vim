@@ -72,7 +72,7 @@ function! s:AlternateFileForRSpecFile(rspec_file)
   elseif s:IsRailsControllerModelViewAssetFile(alternate_file)
     let alternate_file = 'app/' . alternate_file
   else
-    let alternate_file = 'lib/' . alternate_file
+    " let alternate_file = 'lib/' . alternate_file
   end
   return alternate_file
 endfunction
@@ -128,7 +128,7 @@ function! s:AlternateFileForRubyImplementationFile(ruby_implementation_file)
     let alternate_file = substitute(alternate_file, '^app/', '', '')
     let alternate_file = substitute(alternate_file, '^apps/', '', '')
   else
-    let alternate_file = substitute(alternate_file, '^lib/', '', '')
+    " let alternate_file = substitute(alternate_file, '^lib/', '', '')
   end
   let alternate_file = substitute(alternate_file, '\.rb$', '_spec.rb', '')
   let alternate_file = substitute(alternate_file, '\.erb$', '\.erb_spec.rb', '')
